@@ -474,24 +474,28 @@ html:root:root{--bg:#14163A;--grid:#22265a;--ink:#F1F0FF;--card:#1F2255;--ok:#5E
 .spl .dt{width:13px;height:13px;padding:0;border-radius:50%;border:2.5px solid var(--ink);background:var(--card);cursor:pointer;transition:transform .2s,background .2s}
 .spl .dt.on{background:var(--c1);transform:scale(1.25)}
 @media (max-width:899px){.spl .pg{padding:52px 28px 64px}.spl .dio{height:30dvh!important}.spl .hero img.stk.sb{height:96px!important}.spl .hero img.stk{height:62px!important}.spl h1{font-size:clamp(2.4rem,12vw,3.4rem)}.spl .spd{display:none!important}.spl .splbtn{font-size:1.25rem;padding:12px 34px}}
-/* celular: la primera pantalla respira más (espacios entre escena, gato, título y botón) */
+/* celular: primera pantalla en orden título → escena → gato, solo con el gato (sin stickers laterales) y con más aire */
 @media (max-width:899px){
-.spl .pg1{padding:56px 24px 96px}
-.spl .pg1 .pgi{gap:clamp(18px,3.4dvh,32px)}
-.spl .pgc{gap:clamp(12px,2.2dvh,22px)}
-.spl .dio{height:clamp(220px,34dvh,340px)!important;max-width:min(420px,100%)}
-.spl .catb{margin-bottom:4px}
-.spl .hero{gap:14px;margin-bottom:6px}
-.spl h1{line-height:1.05;margin:2px 0 4px}
-.spl .nx{bottom:22px}
+.spl .pg1{padding:60px 24px 100px}
+.spl .pg1 .pgi{gap:clamp(16px,3.2dvh,30px);justify-content:center}
+.spl .pg1 .pgc{display:contents}
+.spl .pg1 h1{order:1;text-align:center;line-height:1;margin:0;font-size:clamp(2.6rem,13.5vw,3.8rem)}
+.spl .pg1 .dio{order:2;height:clamp(230px,36dvh,360px)!important;max-width:min(420px,100%)}
+.spl .pg1 .catb{order:3;margin:0}
+.spl .pg1 .catw{order:4}
+.spl .hero img.stk.sa,.spl .hero img.stk.sc{display:none}
+.spl .hero{margin:0}
+.spl .hero img.stk.sb{height:104px!important}
+.spl .nx{bottom:24px}
 .dio .chip{top:10px;right:10px;font-size:.62rem;padding:5px 10px}
-.dio .dbub{bottom:10px;font-size:.8rem;padding:6px 12px}
+.dio .dbub{left:auto;right:10px;bottom:10px;transform:none;max-width:46%;font-size:.78rem;padding:6px 11px;text-align:center}
+.dio .dbub:hover{transform:translateY(-2px)}.dio .dbub:active{transform:translateY(1px)}
 }
 @media (max-width:899px) and (max-height:700px){
-.spl .pg1{padding:44px 20px 84px}
-.spl .dio{height:clamp(180px,30dvh,260px)!important}
-.spl .hero img.stk.sb{height:80px!important}
-.spl .hero img.stk{height:52px!important}
+.spl .pg1{padding:48px 20px 88px}
+.spl .pg1 h1{font-size:clamp(2.2rem,11vw,3rem)}
+.spl .pg1 .dio{height:clamp(190px,32dvh,270px)!important}
+.spl .hero img.stk.sb{height:84px!important}
 }
 @media (min-width:900px){
 .spl .pg1 .pgi{display:grid;grid-template-columns:clamp(320px,40vw,520px) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
