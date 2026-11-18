@@ -1,0 +1,27 @@
+/* ==========================================================
+   Labstyle Arcade · css/skin-circo.css
+   Skin 'Digital Circus': toldo, marquesina, boletos y botones de feria.
+   Solo aplica en pantallas de juego (body[data-cbg] 1–5), no en el inicio.
+   Se enlaza DESPUÉS de styles.css; para quitarlo, borra su <link>.
+   ========================================================== */
+@keyframes lsBlink{50%{opacity:.4}}@keyframes lsSweep{to{transform:translateX(3%) skewX(-2deg)}}
+body[data-cbg]:not([data-cbg="6"]) #app::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:conic-gradient(from 198deg at 10% -8%,transparent 0 5deg,rgba(255,226,150,.17) 8deg,transparent 24deg),conic-gradient(from 138deg at 90% -8%,transparent 0 5deg,rgba(255,226,150,.17) 8deg,transparent 24deg);animation:lsSweep 7s ease-in-out infinite alternate}
+body[data-cbg]:not([data-cbg="6"]) .card:not(.end):not(.miss){position:relative;overflow:hidden;padding-top:56px!important;border:2px solid #FFD24D!important;border-radius:20px!important;background:radial-gradient(130% 80% at 50% 0,rgba(92,30,98,.97),rgba(20,9,40,.97) 62%)!important;box-shadow:0 0 0 3px #7d0f20,0 0 0 5px rgba(255,210,77,.5),0 26px 50px rgba(0,0,0,.5)!important}
+body[data-cbg]:not([data-cbg="6"]) .card:not(.end):not(.miss)::before{content:"";position:absolute;left:0;right:0;top:0;height:32px;background:repeating-linear-gradient(90deg,#D9242F 0 24px,#FFF3D6 24px 48px);-webkit-mask:radial-gradient(circle at 12px 100%,transparent 11px,#000 12px) 0 0/24px 100%;mask:radial-gradient(circle at 12px 100%,transparent 11px,#000 12px) 0 0/24px 100%;filter:drop-shadow(0 3px 0 #7d0f20)}
+body[data-cbg]:not([data-cbg="6"]) .card:not(.end):not(.miss)::after{content:"";position:absolute;left:10px;right:10px;top:38px;height:8px;background:radial-gradient(circle,#FFE27A 0 2.5px,transparent 3.5px) 0 0/20px 8px repeat-x;filter:drop-shadow(0 0 5px #FFD24D);animation:lsBlink 1.6s ease-in-out infinite}
+body[data-cbg]:not([data-cbg="6"]) .card h2,body[data-cbg]:not([data-cbg="6"]) .card h3{font-family:'Fraunces',Georgia,serif;color:#FFD24D;text-shadow:0 2px 0 #7d0f20;text-align:center}
+body[data-cbg]:not([data-cbg="6"]) .hudbar{background:linear-gradient(180deg,#43102f,#1a0820)!important;border-bottom:3px solid #FFD24D!important;box-shadow:0 10px 26px rgba(0,0,0,.4)!important}
+body[data-cbg]:not([data-cbg="6"]) .hudbar::after{content:"";position:absolute;left:0;right:0;bottom:-11px;height:8px;background:radial-gradient(circle,#FFE27A 0 2.5px,transparent 3.5px) 0 0/20px 8px repeat-x;filter:drop-shadow(0 0 4px #FFD24D);animation:lsBlink 1.6s ease-in-out infinite}
+body[data-cbg]:not([data-cbg="6"]) .hp{border:2px solid #FFD24D!important;border-radius:22px!important;background:linear-gradient(180deg,#5a1236,#2a0b24)!important;box-shadow:0 3px 0 #7d0f20!important;color:#FFF3D6}
+body[data-cbg]:not([data-cbg="6"]) .hud .hp.m{border-radius:999px!important}
+body[data-cbg]:not([data-cbg="6"]) .hud .hp.l,body[data-cbg]:not([data-cbg="6"]) .hud .hp.r{border-radius:22px!important}
+body[data-cbg]:not([data-cbg="6"]) .mc{border:2px solid #FFD24D!important;border-bottom-width:5px!important;border-radius:14px!important;background-image:linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,0) 55%,rgba(0,0,0,.2))!important;font-weight:800}
+body[data-cbg]:not([data-cbg="6"]) .card:not(.end) .q{font-family:'Fraunces',Georgia,serif;color:#FFD24D;text-shadow:0 2px 0 #7d0f20;text-align:center}
+body[data-cbg]:not([data-cbg="6"]) .opt{background-image:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,0) 52%,rgba(0,0,0,.2))!important;border:2px solid #FFD24D!important;border-bottom-width:6px!important;border-radius:16px!important;font-weight:800;transition:transform .15s,filter .15s}
+body[data-cbg]:not([data-cbg="6"]) .opt:not(:disabled):active{transform:translateY(3px);border-bottom-width:3px!important}
+body[data-cbg]:not([data-cbg="6"]) .go{background:linear-gradient(180deg,#FFE27A,#F5A300)!important;color:#2A1200!important;border:2px solid #7a3b00!important;border-bottom-width:6px!important;border-radius:999px!important;font-weight:800;letter-spacing:.02em;box-shadow:0 10px 22px rgba(245,163,0,.3)!important}
+body[data-cbg]:not([data-cbg="6"]) .go.alt{background:linear-gradient(180deg,#FFF9E8,#FFD9A0)!important}
+body[data-cbg]:not([data-cbg="6"]) .go:active{transform:translateY(3px);border-bottom-width:3px!important}
+body[data-cbg]:not([data-cbg="6"]) .back{background:rgba(20,7,31,.8)!important;color:#FFF3D6!important;border:2px solid #FFD24D!important}
+@media(max-width:600px){body[data-cbg]:not([data-cbg="6"]) .card:not(.end):not(.miss){padding-top:50px!important}}
+@media(prefers-reduced-motion:reduce){body[data-cbg]:not([data-cbg="6"]) #app::before,body[data-cbg]:not([data-cbg="6"]) .card::after,body[data-cbg]:not([data-cbg="6"]) .hudbar::after{animation:none!important}}
